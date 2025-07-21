@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programmes - Geography & Resource Development</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="geography_logo.png" alt="Dept Logo" width="300" height="50" class="d-inline-block align-text-top">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="STORY.HTML">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="programmes.html">Programmes</a></li>
+          <li class="nav-item"><a class="nav-link" href="senior_members_specialization.html">Specialization</a></li>
+          
+    
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Include Navbar -->
+  <div id="navbar-placeholder"></div>
+
+  <div class="container mt-5">
+    <h2 class="mb-4">Programmes Offered</h2>
+
+    <h4>Undergraduate Programmes</h4>
+    <ul>
+      <li>BA Geography (Single/Combined Major)</li>
+    </ul>
+
+    <h4>Postgraduate Programmes</h4>
+    <ul>
+      <li>MSc Geo-Information Science</li>
+      <li>MPhil Geo-Information Science</li>
+      <li>PhD Geography</li>
+    </ul>
+
+    <h4>Courses</h4>
+    <ul>
+      <li>Climatology</li>
+      <li>Geomorphology</li>
+      <li>Biogeography</li>
+      <li>Cartography</li>
+      <li>Remote Sensing and Geographic Information System (RS/GIS)</li>
+      <li>Resource Analysis</li>
+      <li>Population Geography</li> 
+      <li>Medical and Health Geography</li>
+      <li>Gender and Development Geography</li>
+      <li>Historical and Political Geography</li>
+      <li>Transportation Geography</li>
+      <li>Urban Studies</li>
+      <li>Agricultural Geography</li>
+      <li>Rural Resource Development</li>
+      <li>Tourism and Regional Development</li>
+    </ul>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Reuse navbar from main file
+    fetch('index.html')
+      .then(res => res.text())
+      .then(data => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(data, 'text/html');
+        const navbar = doc.querySelector('nav.navbar');
+        document.getElementById('navbar-placeholder').appendChild(navbar);
+      });
+  </script>
+</body>
+</html>
